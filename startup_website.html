@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>EPISTIMONAS's Web Page</title>
+
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+      <div class="fullPage">
+
+          <header id="header1">EPISTIMONAS</header><br><br>
+
+          <div class="introDiv">
+
+              <img src="photo.jpg" class="photo">
+
+              <p class="personalInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing bibendum est ultricies integer quis auctor. Sed arcu non odio euismod. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Non arcu risus quis varius quam quisque id. In hac habitasse platea dictumst quisque sagittis purus sit amet. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Interdum varius sit amet mattis vulputate enim nulla. Consequat nisl vel pretium lectus. Velit dignissim sodales ut eu. Sem integer vitae justo eget magna fermentum. Est placerat in egestas erat imperdiet sed euismod nisi porta.</p>
+
+          </div><br><br>
+
+          
+
+          <header class="headersInBody">Upcoming Events</header><br>
+        
+          <div class="allEventsContainerDiv">
+            
+              <div class="upComEventsDiv">
+                <p id="eventName1"></p>
+                <p id="location1"></p>
+                <p id="date1"></p><br><br><br><br>
+              </div>
+        
+              <div class="upComEventsDiv">
+                <p id="eventName2"></p>
+                <p id="location2"></p>
+                <p id="date2"></p><br><br><br><br>
+              </div>
+
+              <div class="upComEventsDiv">
+                <p id="eventName3"></p>
+                <p id="location3"></p>
+                <p id="date3"></p><br><br><br><br>
+              </div>
+
+          </div><br>
+
+          <button type="button" class="styleButton" onclick="style_Me()">Style me</button><br>
+
+          <header class="headersInBody">Articles</header><br>
+
+          <div class="allArticlesDiv">
+            
+              <div class="ArticlesDiv">
+                <h4>Consectetur adipiscing elit pellentesque</h4>
+                <p>Interdum varius sit amet mattis vulputate enim nulla. Sed arcu non odio euismod. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Non arcu risus quis varius quam quisque id. In hac habitasse platea dictumst quisque sagittis purus sit amet. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Interdum varius sit amet mattis vulputate enim nulla</p>
+
+              </div>
+        
+              <div class="ArticlesDiv">
+                <h4>In hac habitasse platea dictumst quisque sagittis purus sit amet</h4>
+                <p>Adipiscing bibendum est ultricies integer quis auctor. Sed arcu non odio euismod. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Non arcu risus quis varius quam quisque id. In hac habitasse platea dictumst quisque sagittis purus sit amet. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Interdum varius sit amet mattis vulputate enim nulla</p>
+
+              </div>
+
+              <div class="ArticlesDiv">
+                  <h4>Euismod elementum nisi quis eleifend quam adipiscing vitae proin</h4>
+                  <p>Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Non arcu risus quis varius quam quisque id. In hac habitasse platea dictumst quisque sagittis purus sit amet. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Interdum varius sit amet mattis vulputate enim nulla</p>
+    
+            </div>
+
+          </div><br>
+
+      </div>
+
+
+      <script type="text/javascript">
+        function style_Me(){
+          for (let i=0; i< document.getElementsByClassName("upComEventsDiv").length;i++) {
+            let getElement = document.getElementsByClassName("upComEventsDiv")[i];
+            getElement.style.fontSize ="large";
+            getElement.style.color="white";
+            getElement.style.fontFamily="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+            getElement.style.border="thick solid purple";
+            getElement.style.borderRadius="20px";
+            getElement.style.backgroundColor = "tomato";
+          }
+        }
+
+        function fillContent(){
+          for (let i=0; i< document.getElementsByClassName("upComEventsDiv").length;i++) {
+            document.getElementById("eventName" + (i+1)).innerHTML= "Event Name " + (i+1);
+            document.getElementById("location" + (i+1)).innerHTML= "Location " + (i+1);
+            document.getElementById("date" + (i+1)).innerHTML= "Date " + (i+1);
+          }
+        }
+
+        function displayList() {
+          document.getElementById("textArea").innerHTML += document.getElementById("inputFavScientist").value + "\n";
+        }
+
+        fillContent();
+      
+    </script>
+
+
+    <form class="clsForm">
+      <label id="lablFavScientist" for="inputFavScientist" >Favorite Scientist</label>
+      <input id="inputFavScientist" type="text" placeholder="Enter your favorite scientist here" >
+      <button id="btnPlus"  type="button" onclick="displayList()">+</button>
+      <textarea id="textArea"  class="textArea"></textarea>
+    </form>
+
+  </body>
+
+</html>
+
+
+
+
+
